@@ -7,7 +7,7 @@ const GameInput = ({ numeroGuess, setNumeroGuess, handleAdivinar }) => {
         type="number"
         value={numeroGuess}
         onChange={(e) => setNumeroGuess(e.target.value)}
-        placeholder="Ingresa tu número"
+        placeholder="Ingresa tu numero"
         className="input-field"
       />
       <button onClick={handleAdivinar} className="input-button">

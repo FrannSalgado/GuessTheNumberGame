@@ -2,68 +2,63 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Arial", sans-serif;
-  background-color: #f0f2f5; /* Un gris claro de fondo */
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
 }
 
 h1 {
-  color: #333; /* Título oscuro */
+  color: #ffffff;
   text-align: center;
   font-size: 2.5rem;
 }
 
 p {
-  color: #555; /* Texto general con un gris suave */
-  font-size: 1.2rem;
+  color: #f1f1f1;
+  font-size: 1.5rem;
   text-align: center;
 }
 
-/* Contenedor principal de la app */
 .App {
-  background-color: white; /* Fondo blanco para el contenedor */
   padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
-  max-width: 400px; /* Ancho máximo para que se vea bien en pantallas pequeñas */
   text-align: center;
+  flex: 1;
 }
 
-/* Estilo para el mensaje del juego */
-p.mensaje {
+.mensaje {
   font-size: 1.2rem;
   font-weight: bold;
-  color: #e74c3c; /* Rojo para los mensajes de error o advertencia */
+  color: #e74c3c;
 }
 
-/* Estilos para el puntaje */
 .score {
   margin-top: 15px;
-  font-size: 1.5rem;
-  color: #3498db; /* Azul claro */
+  font-size: 1.8rem;
+  color: #3498db;
 }
 
 .high-score {
-  font-size: 1.3rem;
-  color: #2ecc71; /* Verde claro */
+  font-size: 1.5rem;
+  color: #2ecc71;
 }
 
-/* Estilo para el contenedor del input */
 .input-container {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 20px;
 }
+.input-container input {
+  background-color: #ffffff;
+}
 
-/* Estilo para el input */
 .input-field {
   padding: 10px;
   width: 200px;
   border: 2px solid #3498db;
-  border-radius: 5px;
+  border-radius: 10px;
   font-size: 16px;
   margin-right: 10px;
   outline: none;
@@ -74,13 +69,12 @@ p.mensaje {
   border-color: #2ecc71;
 }
 
-/* Estilo para el botón */
 .input-button {
   padding: 10px 20px;
   background-color: #3498db;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 20px;
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s, transform 0.2s;
@@ -94,4 +88,61 @@ p.mensaje {
 .input-button:active {
   background-color: #2ecc71;
   transform: translateY(1px);
+}
+
+.game-image {
+  max-width: 300px;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.image-container {
+  margin-left: 20px;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.game-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 800px;
+  background-color: rgba(6, 6, 4, 0.166);
+  backdrop-filter: blur(45px);
+  padding: 20px;
+  border-radius: 35px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+}
+.animar {
+  animation: shake 0.3s ease-in-out;
 }
