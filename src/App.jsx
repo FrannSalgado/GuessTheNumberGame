@@ -3,9 +3,9 @@ import GameInput from "./assets/components/GameInput";
 import "./assets/Styles/App.css";
 import { generateRandomNumber } from "./assets/Utils/generateRandomNumber";
 import defaultImage from "./assets/img/Genio_default.png";
-import mayorImage from "./assets/img/Genio_More_up.png";
+import mayorImage from "./assets/img/Genio_More_Up.png";
 import menorImage from "./assets/img/Genio_more_low.png";
-import ganadorImage from "./assets/img/Genio_win.png";
+import ganadorImage from "./assets/img/Genio_Win.png";
 
 function App() {
   const [numeroTarget, setNumeroTarget] = useState(generateRandomNumber());
